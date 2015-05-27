@@ -1,0 +1,14 @@
+<template name='homeLayout'>
+	<div id="home-layout">
+		Welcome to the home layout
+		{{#if currentUser}}
+		Logged in as 
+		log out
+		{{else}}
+		<a href="{{pathFor 'signin'}}">Sign in</a>
+		{{/if}}
+		<div>
+			{{> yield }}
+		</div>
+	</div>
+</template>
