@@ -6,6 +6,7 @@
 
 meteor-platform
 # autopublish
+# insecure
 coffeescript
 less
 iron:router
@@ -13,5 +14,4 @@ aldeed:autoform
 aldeed:simple-schema
 aldeed:collection2
 semantic:ui
-# flemay:less-autoprefixer
 momentjs:moment
