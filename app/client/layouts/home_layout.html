@@ -3,7 +3,7 @@
 		Welcome to the home layout
 		{{#if currentUser}}
 		Logged in as 
-		log out
+		<a href="{{pathFor 'logout'}}">sign out</a>
 		{{else}}
 		<a href="{{pathFor 'signin'}}">Sign in</a>
 		{{/if}}
