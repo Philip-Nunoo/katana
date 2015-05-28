@@ -40,3 +40,7 @@ Meteor.users.helpers
 
   isSchool: ->
     @roles.indexOf('school') == 0
+
+  fullName: ->
+    if @roles.indexOf('student') == 0
+      "#{@typeDoc.last_name} #{@typeDoc.first_name}"

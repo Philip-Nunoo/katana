@@ -1,0 +1,15 @@
+<template name='schoolNewStudent'>
+	<div class="school-new-student">
+		{{#autoForm id='inserNewSchoolStudent' schema='Schemas.Students' type='method' meteormethod='newStudent'}}
+		<div>
+			{{> afQuickField name='first_name'}}
+			{{> afQuickField name='last_name'}}
+			{{> afQuickField name='other_names'}}
+			{{> afQuickField name='date_of_birth'}}
+			{{> afQuickField name='email'}}
+			{{> afQuickField name='note'}}
+			<button type='submit' class="ui button">Save</button>
+		</div>
+		{{/autoForm}}
+	</div>
+</template>
