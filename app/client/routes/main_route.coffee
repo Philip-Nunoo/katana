@@ -8,8 +8,8 @@ Router.map ->
 		name: 'logout'
 		onBeforeAction: ->
 			Meteor.logout()
-			@next()
 			Router.go '/'
+			@next()
 
 	@route 'sign-in',
 		name: 'signin'
@@ -22,6 +22,4 @@ Router.map ->
 	        if (user)
 	        	Router.go '/dashboard'
 
-AccountsTemplates.configureRoute 'sign-in'
-	
-	
+# AccountsTemplates.configureRoute 'sign-in'	

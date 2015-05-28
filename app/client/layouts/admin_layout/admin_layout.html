@@ -2,9 +2,16 @@
 	<div id='admin-layout'>
 		<div>
 			<h1>Welcome to the admin layout</h1>
-			{{#if currentUser}}
-			<a href="{{pathFor 'logout'}}">sign out</a>
-			{{/if}}
+			<div>				
+				{{#if currentUser}}
+				<a href="{{pathFor 'logout'}}">sign out</a>
+				{{/if}}
+			</div>
+			<div>
+				<ul>
+					<li><a href="{{pathFor 'adminSchools'}}">Schools</a></li>
+				</ul>
+			</div>
 		</div>
 		<div>
 			{{> yield}}
