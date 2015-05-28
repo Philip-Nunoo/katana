@@ -11,20 +11,29 @@ Schemas.User = new SimpleSchema
   	"emails.$.verified":
     	type: Boolean
 
-  	createdAt:
-    	type: Date
+	createdAt:
+  	type: Date
 
-  	profile:
-    	type: Object
-    	blackbox: true
-    	optional: true
+	profile:
+  	type: Object
+  	blackbox: true
+  	optional: true
 
-    services:
-	    type: Object
-	    optional: true
-	    blackbox: true
+  services:
+    type: Object
+    optional: true
+    blackbox: true
 
 	roles:
 	    type: [String]
 	    blackbox: true
 	    optional: true
+
+  typeDoc: # based on user roles enter their doc
+      type: Object
+      blackbox: true
+      optional: true
+
+Meteor.users.helpers
+  isAdmin: ->
+    @roles.indexOf('admin') == 0

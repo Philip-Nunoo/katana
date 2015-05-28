@@ -1,0 +1,9 @@
+<template name='adminNewSchool'>
+{{# autoForm id='insertSchool' type='method' schema='Schemas.Schools' meteormethod='createSchool'}}
+{{> afQuickField name='name'}}
+{{> afQuickField name='address'}}
+{{> afQuickField name='email'}}
+{{> afQuickField name='note'}}
+<button type='submit' class="ui button">Save</button>
+{{/autoForm}}
+</template>

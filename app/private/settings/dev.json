@@ -1,0 +1,6 @@
+{
+	"createDemoSchools": false,
+	"createDemoTeachers": false,
+	"createDemoParents": false,
+	"createDemoStudents": false
+}
