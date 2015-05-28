@@ -1,11 +1,10 @@
-@AdminController = RouteController.extend
+@SchoolController = RouteController.extend
 	onBeforeAction: ->
 		if not Meteor.user() and not Meteor.loggingIn()
 			Router.go '/login'
 		else
-			if not Meteor.user().isAdmin()
+			if not Meteor.user().isSchool()
 				Router.go '/login'
 			else
-				@layout 'adminLayout'
+				@layout 'schoolLayout'
 		@next()
-		

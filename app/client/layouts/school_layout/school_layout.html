@@ -1,0 +1,21 @@
+<template name='schoolLayout'>
+	<div class="school-layout">
+		<div>
+			<h1>Welcome to the schools dashboard</h1>
+			{{#if currentUser}}
+			<a href="{{pathFor 'logout'}}">sign out</a>
+			{{else}}
+			not signed in
+			{{/if}}
+		</div>
+		<div>
+			<ul>
+				<li><a href="{{pathFor 'schoolStudents'}}">Students</a></li>
+				<li><a href="{{pathFor 'schoolStaffs'}}">Staffs</a></li>
+			</ul>
+		</div>
+		<div>
+			{{> yield}}
+		</div>
+	</div>
+</template>

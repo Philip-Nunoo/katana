@@ -37,3 +37,6 @@ Schemas.User = new SimpleSchema
 Meteor.users.helpers
   isAdmin: ->
     @roles.indexOf('admin') == 0
+
+  isSchool: ->
+    @roles.indexOf('school') == 0
